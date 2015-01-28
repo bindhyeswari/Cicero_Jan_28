@@ -10,9 +10,23 @@
             width: 200px;
             background-color: darkred;
             margin: 100px auto;
+
+            /*transform: rotate(45deg);*/
         }
 
     </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var div = document.querySelector('div');
+
+            div.addEventListener('click', function () {
+                div.style.transform = 'rotate(45deg)';
+            });
+
+        });
+
+    </script>
 </head>
 <body>
 
