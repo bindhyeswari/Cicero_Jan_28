@@ -21,7 +21,18 @@
             var div = document.querySelector('div');
 
             div.addEventListener('click', function () {
-                div.style.transform = 'rotate(45deg)';
+
+                var currAngle = 0;
+                var intervalid = setInterval(function () {
+                    currAngle++;
+                    if (currAngle > 45) {
+                        clearInterval(intervalid);
+                    } else {
+                        div.style.transform = 'rotate(' + currAngle + 'deg)';
+                    }
+
+                }, 100);
+
             });
 
         });
