@@ -11,6 +11,9 @@
             background-color: darkred;
             margin: 100px auto;
 
+            /*transform: translate(100px);*/
+
+
             /*transform: rotate(45deg);*/
         }
 
@@ -19,23 +22,25 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             var div = document.querySelector('div');
-
+            rotateOnClick();
             div.addEventListener('click', function () {
-
-                var currAngle = 0;
-                var intervalid = setInterval(function () {
-                    currAngle++;
-                    if (currAngle > 45) {
-                        clearInterval(intervalid);
-                    } else {
-                        div.style.transform = 'rotate(' + currAngle + 'deg)';
-                    }
-
-                }, 100);
-
+                div.style.transform = 'translate(100px)';
             });
-
         });
+
+        function rotateOnClick() {
+            var currAngle = 0;
+            var intervalid = setInterval(function () {
+                currAngle++;
+                if (currAngle > 45) {
+                    clearInterval(intervalid);
+                } else {
+                    div.style.transform = 'rotate(' + currAngle + 'deg)';
+                }
+            }, 100);
+        }
+
+        // todo: Start rotating the square on mouseenter and stop rotating on mouseleave
 
     </script>
 </head>
