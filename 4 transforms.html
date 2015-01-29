@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin: 100px auto;
+            animation: kf 2s linear infinite normal;
+        }
+
+        @keyframes kf {
+            0% {
+                transform: translate(0) rotate(0deg) scale(1);
+            }
+            25% {
+                transform: translate(300px) rotate(180deg) scale(1.5);
+            }
+            50% {
+                transform: translate(0) rotate(360deg) scale(2);
+            }
+            75% {
+                transform: translate(-300px) rotate(540deg) scale(1.5);
+            }
+            100% {
+                transform: translate(0) rotate(720deg) scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div></div>
+
+</body>
+</html>
